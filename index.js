@@ -5,10 +5,11 @@ function spotEachRebel(rebels) {
    * @BUG ALERT - We need to be pushing 'Look! Rebel scum!' once for each rebel spotted
    * The number of rebels can be expected to exactly equal the number of times that 'Look! Rebel scum!' is included
    */
-  if (rebels) {
-    spottedRebelCalls.push('Look! Rebel scum!')
-  }
-
+rebels.forEach (function(){
+  spottedRebelCalls.push('Look! Rebel scum!')
+})
+    
+  
   return spottedRebelCalls
 }
 
@@ -19,7 +20,7 @@ function shootAtNothing() {
   let shotsAtNothing = []
 
   /** @BUG ALERT - Looping is not quite correct */
-  for (let i = 1; i < 4; i++) {
+  for (let i = 0; i < 4; i++) {
     shotsAtNothing.push('pew')
   }
 
